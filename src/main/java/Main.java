@@ -85,7 +85,7 @@ public class Main implements Runnable {
         f.println("Clique,Node");
         for(int i=0; i<cliques.size(); ++i)
             for (int j : cliques.get(i))
-                if (i < j) f.println(String.format("%s,%s", i, node_names.get(j)));
+                f.println(String.format("%s,%s", i, node_names.get(j)));
         f.close();
     }
 }

@@ -32,8 +32,8 @@ public class BronKerbosh {
         for(Integer v: Sets.difference(P, graph.get(pivot))) {
             bronkerbosh(cliques, graph, Sets.union(R, new HashSet<>(Collections.singletonList(v))),
                     Sets.intersection(P, graph.get(v)), Sets.intersection(X, graph.get(v)));
-            P.remove(v);
-            X.add(v);
+            P=Sets.difference(P,new HashSet<>(Collections.singletonList(v)));
+            X=Sets.union(X,new HashSet<>(Collections.singletonList(v)));
         }
     }
 }
